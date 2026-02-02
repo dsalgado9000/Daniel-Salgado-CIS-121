@@ -1,1 +1,24 @@
 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    //define variables
+    float quantity, unitprice;
+    float extended;
+    
+    //input
+    cout << "enter quantity";
+    cin >> quantity;
+    cout << "enter unitprice";
+    cin >> unitprice;
+    //process
+    extended = quantity * unitprice;
+    
+    //output
+    cout << "extended price is " << extended << endl;
+    return 0;
+    
+}
+
