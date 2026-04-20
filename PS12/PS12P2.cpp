@@ -65,4 +65,5 @@ int main()
         cout << "Please enter city to search for, ctrl+d to stop";
         cin >> scity;
     }
+    return 0;
 }
