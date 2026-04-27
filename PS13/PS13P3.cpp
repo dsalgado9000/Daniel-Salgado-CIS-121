@@ -22,9 +22,12 @@ struct Student {
 
 double computetuition(char code, int credits) {
     double rate;
-    if (code == 'I' || code == 'i') {
+    if (code == 'I') 
+    {
         rate = 250.00;
-    } else {
+    } 
+    else 
+    {
         rate = 500.00;
     }
     return credits * rate;
