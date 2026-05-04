@@ -1,0 +1,135 @@
+//
+//  Header.h2
+//  PS14
+//
+//  Created by Daniel Salgado on 5/3/26.
+//
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+class computer
+{
+public:
+    computer();
+    void computer_make(string);
+    string computer_make();
+    void computer_model(string);
+    string computer_model();
+    void computer_cpu(string);
+    string computer_cpu();
+    void computer_ram(string);
+    string computer_ram();
+    void computer_harddrive(string);
+    string computer_harddrive();
+    void computer_type(string);
+    string computer_type();
+    float cost();
+    
+protected:
+    string p_make;
+    string p_model;
+    string p_cpu;
+    string p_ram;
+    string p_harddrive;
+    string p_type;
+    float p_cost;
+
+};
+computer::computer()
+{
+    p_make = "Lenovo";
+    p_model = "LE100A";
+    p_cpu = "Intel";
+    p_ram = "32GB";
+    p_harddrive = "HD";
+    p_type = "Laptop";
+}
+void computer :: computer_make (string make)
+{
+p_make = make;
+}
+string computer::computer_make()
+{
+return p_make;
+}
+void computer :: computer_model(string model)
+{
+p_model = model;
+}
+string computer::computer_model()
+{
+return p_model;
+}
+void computer :: computer_cpu(string cpu)
+{
+p_cpu = cpu;
+}
+string computer::computer_cpu()
+{
+return p_cpu;
+}
+void computer :: computer_ram (string ram)
+{
+p_ram = ram;
+}
+string computer::computer_ram()
+{
+return p_ram;
+}
+void computer :: computer_type(string type)
+{
+p_type = type;
+}
+string computer::computer_type()
+{
+return p_type;
+}
+void computer :: computer_harddrive(string harddrive)
+{
+p_harddrive = harddrive;
+}
+string computer::computer_harddrive()
+{
+return p_harddrive;
+}
+float computer::cost()
+{
+if (p_make == "Lenovo")
+{
+    p_cost = 1200;
+}
+else if (p_make == "HP")
+{
+    p_cost = 1000;
+}
+else
+{
+    p_cost = 2000;
+}
+if (p_cpu == "intel")
+{
+    p_cost += 200;
+}
+if (p_ram == "16GB")
+{
+    p_cost += 300;
+}
+else
+{
+    p_cost +=500;
+}
+if (p_harddrive == "SSD")
+{
+    p_cost +=500;
+}
+if (p_type == "Tablet")
+{
+    p_cost -=200;
+}
+else
+{
+    p_cost +=300;
+}
+return p_cost;
+}
